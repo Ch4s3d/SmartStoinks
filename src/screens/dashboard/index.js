@@ -149,7 +149,7 @@ async function fetchReport({stockDataJoined, ReportReady, setLoadingArea}) {
      const messages = [
         {
             role: 'system',
-            content: 'You are a trading guru. Given data on share prices over the past 3 days, write a report of no more than 150 words describing the stocks performance and recommending whether to buy, hold or sell.'
+            content: 'Eres un gurú del comercio. Dados los datos sobre los precios de las acciones durante los últimos 3 días, escriba un informe de no más de 150 palabras que describa el desempeño de las acciones y recomiende si comprar, mantener o vender.'
         },
         {
             role: 'user',
