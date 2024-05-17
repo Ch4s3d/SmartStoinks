@@ -1,0 +1,33 @@
+@use './General'
+
+*
+  font-family: General.$font-family-content
+  margin: 0
+  padding: 0
+  //border: 1px solid red
+  //box-sizing: border-box
+
+a
+  color: inherit
+  text-decoration: none
+  transition: all .5s ease
+  cursor: pointer
+
+a:hover
+  color: General.$font-color-focus
+
+textarea:focus, input:focus
+  outline: none
+
+span
+  font-weight: 700
+
+li
+  list-style-type: none
+
+body
+  position: fixed
+  width: 100%
+  height: 100%
+
+

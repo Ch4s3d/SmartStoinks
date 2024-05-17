@@ -1,0 +1,113 @@
+@use '../../General'
+
+$selectedColor: #0F2027
+
+.DashboardScreenContainer
+    @include General.w-h($width: 100vw, $height: 100vh)
+    @include General.flex($direction: column, $justify: center, $items: center)
+    background: #0F2027
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027)
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027)
+
+.DashboardScreen
+    @include General.w-h($width: 400px, $height: 600px)
+    @include General.flex($direction: column, $justify: space-between, $items: center)
+    background: #ebebeb
+    border-radius: 5px
+    box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75)
+    -webkit-box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75)
+    -moz-box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75)
+
+    .Header
+        @include General.w-h($width: 100%, $height: 200px)
+        @include General.flex($direction: column, $justify: space-between, $items: center)
+        box-sizing: border-box
+        background-color: black
+        color: white
+        border-radius: 5px
+        padding: 30px
+
+    .Body
+        @include General.w-h($width: 100%, $height: 75%)
+        @include General.flex($direction: column, $justify: space-between, $items: center)
+        box-sizing: border-box
+        padding: 30px 80px
+        text-align: center
+
+        .Input
+            @include General.w-h($width: 100%, $height: 50px)
+            @include General.flex($direction: row, $justify: space-between, $items: center)
+            box-sizing: border-box
+            border: 2px solid black
+
+            input
+                @include General.w-h($width: 80%, $height: 100%)
+                box-sizing: border-box
+                border: none
+                padding: 0 10px
+
+            button
+                @include General.w-h($width: 20%, $height: 100%)
+                border: none
+                border-left: 2px solid black
+
+        .Tickers
+            @include General.w-h($width: 100%, $height: 50px)
+            @include General.flex($direction: row, $justify: space-evenly, $items: center)
+
+            .Ticker
+                @include General.w-h($width: 60px, $height: 30px)
+                @include General.flex($direction: row, $justify: center, $items: center)
+                background-color: rgb(181, 194, 255)
+                text-transform: uppercase
+                border-radius: 5px
+
+        .Submit
+            @include General.w-h($width: 100%, $height: 50px)
+            border: 2px solid black
+            background-color: rgb(132, 247, 166)
+
+    .Loading
+        @include General.w-h($width: 100%, $height: 75%)
+        @include General.flex($direction: column, $justify: space-evenly, $items: center)
+
+        img
+            @include General.w-h($width: 200px, $height: 200px)
+
+    .Disclaimer
+        font-size: 10px
+        margin-bottom: 20px
+
+    .Toast
+        @include General.flex($direction: row, $justify: center, $items: center)
+        background-color: rgb(187, 0, 0)
+        position: absolute
+        bottom: 20px
+        right: 0
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+        color: white
+        padding: 10px
+        padding-right: 100px
+
+        p
+            margin-left: 20px
+
+    .Report
+        @include General.w-h($width: 90%, $height: 60%)
+        position: relative
+        box-sizing: border-box
+        margin: 20px
+        padding: 30px
+        border: 2px solid black
+
+        h3
+            width: 100px
+            position: absolute
+            top: -10px
+            background-color: #ebebeb
+            padding: 0 10px
+            left: 0
+            right: 0
+            margin-left: auto 
+            margin-right: auto
